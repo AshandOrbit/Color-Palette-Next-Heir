@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Element United / NextHeir — Brand Color Palette</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background: #0A0A0A;
+            color: #FDF5E6;
+            line-height: 1.6;
+            padding: 3rem 2rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2.5rem;
+            font-weight: 400;
+            margin-bottom: 0.5rem;
+            color: #D4AF37;
+        }
+
+        .subtitle {
+            color: #9A8F80;
+            margin-bottom: 3rem;
+            font-size: 0.9rem;
+        }
+
+        h2 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.75rem;
+            font-weight: 400;
+            margin: 2.5rem 0 1.5rem;
+            color: #F7E7CE;
+            border-bottom: 1px solid #2A2A2A;
+            padding-bottom: 0.5rem;
+        }
+
+        h3 {
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            color: #9A8F80;
+            margin: 2rem 0 1rem;
+        }
+
+        .color-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .color-card {
+            background: #121212;
+            border-radius: 8px;
+            overflow: hidden;
+            border: 1px solid #2A2A2A;
+        }
+
+        .color-swatch {
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.75rem;
+            font-weight: 500;
+        }
+
+        .color-info {
+            padding: 0.75rem 1rem;
+        }
+
+        .color-name {
+            font-size: 0.8rem;
+            color: #F7E7CE;
+            margin-bottom: 0.25rem;
+        }
+
+        .color-hex {
+            font-size: 0.75rem;
+            color: #9A8F80;
+            font-family: monospace;
+        }
+
+        .usage-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+            font-size: 0.85rem;
+        }
+
+        .usage-table th,
+        .usage-table td {
+            padding: 0.75rem 1rem;
+            text-align: left;
+            border-bottom: 1px solid #2A2A2A;
+        }
+
+        .usage-table th {
+            color: #D4AF37;
+            font-weight: 500;
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+
+        .usage-table td {
+            color: #F7E7CE;
+        }
+
+        .check {
+            color: #4A7C6B;
+        }
+
+        .dash {
+            color: #4A1C23;
+        }
+
+        .page-tag {
+            display: inline-block;
+            padding: 0.2rem 0.5rem;
+            border-radius: 4px;
+            font-size: 0.65rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-right: 0.25rem;
+            margin-bottom: 0.25rem;
+        }
+
+        .tag-weddings { background: #8B5A5A; color: #FDF5E6; }
+        .tag-memorial { background: #722F37; color: #FDF5E6; }
+        .tag-vault { background: #4A1C23; color: #FDF5E6; }
+        .tag-stria { background: #2E5A4C; color: #FDF5E6; }
+        .tag-main { background: #B8860B; color: #0A0A0A; }
+
+        .css-block {
+            background: #121212;
+            border: 1px solid #2A2A2A;
+            border-radius: 8px;
+            padding: 1.5rem;
+            font-family: monospace;
+            font-size: 0.8rem;
+            line-height: 1.8;
+            overflow-x: auto;
+            color: #F7E7CE;
+        }
+
+        .css-block .comment {
+            color: #9A8F80;
+        }
+
+        .css-block .property {
+            color: #D4AF37;
+        }
+
+        .css-block .value {
+            color: #4A7C6B;
+        }
+
+        .summary-box {
+            background: linear-gradient(135deg, #121212 0%, #1E1E1E 100%);
+            border: 1px solid #8B6914;
+            border-radius: 12px;
+            padding: 2rem;
+            margin: 2rem 0;
+        }
+
+        .summary-box h3 {
+            color: #D4AF37;
+            margin-top: 0;
+        }
+
+        .summary-list {
+            list-style: none;
+            color: #F7E7CE;
+        }
+
+        .summary-list li {
+            padding: 0.5rem 0;
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+        }
+
+        .summary-list li::before {
+            content: '◆';
+            color: #D4AF37;
+            font-size: 0.5rem;
+            margin-top: 0.4rem;
+        }
+
+        footer {
+            margin-top: 4rem;
+            padding-top: 2rem;
+            border-top: 1px solid #2A2A2A;
+            text-align: center;
+            color: #9A8F80;
+            font-size: 0.8rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Element United / NextHeir</h1>
+        <p class="subtitle">Brand Color Palette Reference — December 2024</p>
+
+        <!-- Universal Colors -->
+        <h2>Universal Colors (All Pages)</h2>
+        
+        <h3>Gold Palette</h3>
+        <div class="color-grid">
+            <div class="color-card">
+                <div class="color-swatch" style="background: #B8860B; color: #0A0A0A;">Aa</div>
+                <div class="color-info">
+                    <div class="color-name">--gold</div>
+                    <div class="color-hex">#B8860B</div>
+                </div>
+            </div>
+            <div class="color-card">
+                <div class="color-swatch" style="background: #D4AF37; color: #0A0A0A;">Aa</div>
+                <div class="color-info">
+                    <div class="color-name">--gold-light</div>
+                    <div class="color-hex">#D4AF37</div>
+                </div>
+            </div>
+            <div class="color-card">
+                <div class="color-swatch" style="background: #8B6914; color: #FDF5E6;">Aa</div>
+                <div class="color-info">
+                    <div class="color-name">--gold-dark</div>
+                    <div class="color-hex">#8B6914</div>
+                </div>
+            </div>
+            <div class="color-card">
+                <div class="color-swatch" style="background: rgba(212, 175, 55, 0.3); color: #0A0A0A; border: 1px dashed #D4AF37;">Aa</div>
+                <div class="color-info">
+                    <div class="color-name">--gold-glow</div>
+                    <div class="color-hex">rgba(212,175,55,0.3)</div>
+                </div>
+            </div>
+        </div>
+
+        <h3>Light Neutrals</h3>
+        <div class="color-grid">
+            <div class="color-card">
+                <div class="color-swatch" style="background: #F7E7CE; color: #0A0A0A;">Aa</div>
+                <div class="color-info">
+                    <div class="color-name">--champagne</div>
+                    <div class="color-hex">#F7E7CE</div>
+                </div>
+            </div>
+            <div class="color-card">
+                <div class="color-swatch" style="background: #FDF5E6; color: #0A0A0A;">Aa</div>
+                <div class="color-info">
+                    <div class="color-name">--cream</div>
+                    <div class="color-hex">#FDF5E6</div>
+                </div>
+            </div>
+        </div>
+
+        <h3>Dark Neutrals</h3>
+        <div class="color-grid">
+            <div class="color-card">
+                <div class="color-swatch" style="background: #0A0A0A; color: #FDF5E6;">Aa</div>
+                <div class="color-info">
+                    <div class="color-name">--noir</div>
+                    <div class="color-hex">#0A0A0A</div>
+                </div>
+            </div>
+            <div class="color-card">
+                <div class="color-swatch" style="background: #121212; color: #FDF5E6;">Aa</div>
+                <div class="color-info">
+                    <div class="color-name">--velvet</div>
+                    <div class="color-hex">#121212</div>
+                </div>
+            </div>
+            <div class="color-card">
+                <div class="color-swatch" style="background: #1E1E1E; color: #FDF5E6;">Aa</div>
+                <div class="color-info">
+                    <div class="color-name">--smoke</div>
+                    <div class="color-hex">#1E1E1E</div>
+                </div>
+            </div>
+            <div class="color-card">
+                <div class="color-swatch" style="background: #2A2A2A; color: #FDF5E6;">Aa</div>
+                <div class="color-info">
+                    <div class="color-name">--slate</div>
+                    <div class="color-hex">#2A2A2A</div>
+                </div>
+            </div>
+            <div class="color-card">
+                <div class="color-swatch" style="background: #9A8F80; color: #0A0A0A;">Aa</div>
+                <div class="color-info">
+                    <div class="color-name">--text-muted</div>
+                    <div class="color-hex">#9A8F80</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- NextHeir Core -->
+        <h2>NextHeir Core (Most Pages)</h2>
+        
+        <h3>Burgundy Palette</h3>
+        <div class="color-grid">
+            <div class="color-card">
+                <div class="color-swatch" style="background: #722F37; color: #FDF5E6;">Aa</div>
+                <div class="color-info">
+                    <div class="color-name">--burgundy</div>
+                    <div class="color-hex">#722F37</div>
+                </div>
+            </div>
+            <div class="color-card">
+                <div class="color-swatch" style="background: #4A1C23; color: #FDF5E6;">Aa</div>
+                <div class="color-info">
+                    <div class="color-name">--burgundy-dark</div>
+                    <div class="color-hex">#4A1C23</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Weddings -->
+        <h2>NextHeir Weddings <span class="page-tag tag-weddings">Weddings Only</span></h2>
+        
+        <h3>Rose Palette (replaces Burgundy)</h3>
+        <div class="color-grid">
+            <div class="color-card">
+                <div class="color-swatch" style="background: #E8D4D4; color: #0A0A0A;">Aa</div>
+                <div class="color-info">
+                    <div class="color-name">--blush</div>
+                    <div class="color-hex">#E8D4D4</div>
+                </div>
+            </div>
+            <div class="color-card">
+                <div class="color-swatch" style="background: #8B5A5A; color: #FDF5E6;">Aa</div>
+                <div class="color-info">
+                    <div class="color-name">--rose</div>
+                    <div class="color-hex">#8B5A5A</div>
+                </div>
+            </div>
+            <div class="color-card">
+                <div class="color-swatch" style="background: #5C3D3D; color: #FDF5E6;">Aa</div>
+                <div class="color-info">
+                    <div class="color-name">--rose-dark</div>
+                    <div class="color-hex">#5C3D3D</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- STRIA -->
+        <h2>STRIA Registry <span class="page-tag tag-stria">Element United Only</span></h2>
+        
+        <h3>Emerald Palette</h3>
+        <div class="color-grid">
+            <div class="color-card">
+                <div class="color-swatch" style="background: #2E5A4C; color: #FDF5E6;">Aa</div>
+                <div class="color-info">
+                    <div class="color-name">--emerald</div>
+                    <div class="color-hex">#2E5A4C</div>
+                </div>
+            </div>
+            <div class="color-card">
+                <div class="color-swatch" style="background: #4A7C6B; color: #FDF5E6;">Aa</div>
+                <div class="color-info">
+                    <div class="color-name">--emerald-light</div>
+                    <div class="color-hex">#4A7C6B</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Custom Vault -->
+        <h2>Custom Vault Accents <span class="page-tag tag-vault">Optional</span></h2>
+        
+        <h3>Leather Palette (Barlow Vault Example)</h3>
+        <div class="color-grid">
+            <div class="color-card">
+                <div class="color-swatch" style="background: #8B4513; color: #FDF5E6;">Aa</div>
+                <div class="color-info">
+                    <div class="color-name">--leather</div>
+                    <div class="color-hex">#8B4513</div>
+                </div>
+            </div>
+            <div class="color-card">
+                <div class="color-swatch" style="background: #A0522D; color: #FDF5E6;">Aa</div>
+                <div class="color-info">
+                    <div class="color-name">--leather-light</div>
+                    <div class="color-hex">#A0522D</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Usage Matrix -->
+        <h2>Usage by Page</h2>
+        <table class="usage-table">
+            <thead>
+                <tr>
+                    <th>Page</th>
+                    <th>Type</th>
+                    <th>Base</th>
+                    <th>Accent</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Index-4</td>
+                    <td>Weddings</td>
+                    <td>Gold + Neutrals</td>
+                    <td>Rose / Blush</td>
+                </tr>
+                <tr>
+                    <td>Index-5</td>
+                    <td>Memorial</td>
+                    <td>Gold + Neutrals</td>
+                    <td>Burgundy</td>
+                </tr>
+                <tr>
+                    <td>Index-6</td>
+                    <td>Thurston Vault</td>
+                    <td>Gold + Neutrals + Slate</td>
+                    <td>Burgundy</td>
+                </tr>
+                <tr>
+                    <td>Index-7</td>
+                    <td>Dean Martin Ring</td>
+                    <td>Gold + Neutrals</td>
+                    <td>Burgundy</td>
+                </tr>
+                <tr>
+                    <td>Index-8</td>
+                    <td>Barlow Vault</td>
+                    <td>Gold + Neutrals + Slate</td>
+                    <td>Burgundy + Leather</td>
+                </tr>
+                <tr>
+                    <td>Index-9</td>
+                    <td>NextHeir Main</td>
+                    <td>Gold + Neutrals</td>
+                    <td>Burgundy</td>
+                </tr>
+                <tr>
+                    <td>Index-10</td>
+                    <td>Element United</td>
+                    <td>Gold + Neutrals + Slate</td>
+                    <td>Burgundy + Emerald</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- Summary -->
+        <div class="summary-box">
+            <h3>Brand Architecture</h3>
+            <ul class="summary-list">
+                <li><strong>Gold</strong> — Element United brand constant. Trust, premium, unifying thread across all products.</li>
+                <li><strong>Burgundy</strong> — NextHeir core. Legacy, warmth, heritage. Used on most NextHeir pages.</li>
+                <li><strong>Rose/Blush</strong> — Weddings vertical. Softer, romantic, feminine.</li>
+                <li><strong>Emerald</strong> — STRIA Registry. Verification, sustainability, trust infrastructure.</li>
+                <li><strong>Leather</strong> — Custom vault personalization. Warm, rustic, individual family character.</li>
+            </ul>
+        </div>
+
+        <!-- CSS Variables -->
+        <h2>Copy-Paste CSS</h2>
+        <div class="css-block">
+<span class="comment">/* === UNIVERSAL (all pages) === */</span>
+:root {
+    <span class="comment">/* Golds */</span>
+    <span class="property">--gold:</span> <span class="value">#B8860B</span>;
+    <span class="property">--gold-light:</span> <span class="value">#D4AF37</span>;
+    <span class="property">--gold-dark:</span> <span class="value">#8B6914</span>;
+    <span class="property">--gold-glow:</span> <span class="value">rgba(212, 175, 55, 0.3)</span>;
+    
+    <span class="comment">/* Light Neutrals */</span>
+    <span class="property">--champagne:</span> <span class="value">#F7E7CE</span>;
+    <span class="property">--cream:</span> <span class="value">#FDF5E6</span>;
+    
+    <span class="comment">/* Dark Neutrals */</span>
+    <span class="property">--noir:</span> <span class="value">#0A0A0A</span>;
+    <span class="property">--velvet:</span> <span class="value">#121212</span>;
+    <span class="property">--smoke:</span> <span class="value">#1E1E1E</span>;
+    <span class="property">--slate:</span> <span class="value">#2A2A2A</span>;
+    <span class="property">--text-muted:</span> <span class="value">#9A8F80</span>;
+    
+    <span class="comment">/* === NEXTHEIR CORE === */</span>
+    <span class="property">--burgundy:</span> <span class="value">#722F37</span>;
+    <span class="property">--burgundy-dark:</span> <span class="value">#4A1C23</span>;
+    
+    <span class="comment">/* === WEDDINGS (replaces burgundy) === */</span>
+    <span class="property">--blush:</span> <span class="value">#E8D4D4</span>;
+    <span class="property">--rose:</span> <span class="value">#8B5A5A</span>;
+    <span class="property">--rose-dark:</span> <span class="value">#5C3D3D</span>;
+    
+    <span class="comment">/* === STRIA === */</span>
+    <span class="property">--emerald:</span> <span class="value">#2E5A4C</span>;
+    <span class="property">--emerald-light:</span> <span class="value">#4A7C6B</span>;
+    
+    <span class="comment">/* === CUSTOM VAULT ACCENTS === */</span>
+    <span class="property">--leather:</span> <span class="value">#8B4513</span>;
+    <span class="property">--leather-light:</span> <span class="value">#A0522D</span>;
+}
+        </div>
+
+        <footer>
+            Element United — Trust Infrastructure from Source to Sovereign<br>
+            Color Palette Reference Document
+        </footer>
+    </div>
+</body>
+</html>
